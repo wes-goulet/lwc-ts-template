@@ -1,9 +1,6 @@
 # ignore the dist folder that rollup outputs to
 dist/
 
-# ignore the no-types folder that babel outputs to
-no-types/
-
 # Created by https://www.gitignore.io/api/node,macos,windows,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,macos,windows,visualstudiocode
 
