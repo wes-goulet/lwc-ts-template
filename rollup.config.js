@@ -6,6 +6,7 @@ import path from "path";
 import { terser } from "rollup-plugin-terser";
 import serve from "rollup-plugin-serve";
 import alias from "rollup-plugin-alias";
+import babel from "rollup-plugin-babel";
 const resolve = require("rollup-plugin-node-resolve");
 
 const projectPackage = require("./package.json");
@@ -24,12 +25,13 @@ fs.removeSync(dist);
 fs.copySync(publicFolder, dist);
 
 export default {
-    input: "no-types/index.js",
+    input: "./src/index.ts",
     output: {
         file: `${distFolderName}/bundle.js`,
         format: "esm"
     },
     plugins: [
+        babel(),
         lwcCompiler({
             stylesheetConfig: { customProperties: { allowDefinition: true } },
             resolveFromPackages: false
