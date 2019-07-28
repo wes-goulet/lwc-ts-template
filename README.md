@@ -20,3 +20,7 @@ npm start
 ```bash
 npm run build-prod
 ```
+
+## Compatibility
+
+This template, as configured, is for modern browsers that support ES Modules and Web Components. If you need to support older browsers you'll need to adjust the configuration. You can see examples of compat settings [on the lwc-create-app template](https://github.com/muenzpraeger/lwc-create-app/blob/master/packages/lwc-create-app/templates/src/client/index.non-wc.js) and [on the lwc-todomvc sample](https://github.com/salesforce/lwc-todomvc/blob/master/scripts/rollup.config.js).

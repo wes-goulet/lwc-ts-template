@@ -1,8 +1,8 @@
 // @ts-ignore
-import { createElement } from "lwc";
+import { buildCustomElementConstructor } from "lwc";
 // @ts-ignore
 import App from "template/app";
 
-const element = createElement("template-app", { is: App });
-
+customElements.define("lwc-app", buildCustomElementConstructor(App));
+const element = document.createElement("lwc-app");
 document.body.appendChild(element);
