@@ -7,9 +7,11 @@ import { terser } from "rollup-plugin-terser";
 import serve from "rollup-plugin-serve";
 import alias from "rollup-plugin-alias";
 import babel from "rollup-plugin-babel";
-const resolve = require("rollup-plugin-node-resolve");
+import resolve from "rollup-plugin-node-resolve";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const projectPackage = require("./package.json");
+
 const distFolderName = "dist";
 const dist = path.resolve(__dirname, `./${distFolderName}`);
 const publicFolder = path.resolve(__dirname, `./public`);
