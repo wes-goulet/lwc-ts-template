@@ -8,17 +8,18 @@
   "scripts": {
     "prepare": "npm run build",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && rollup -c rollup.config.js --environment build:development",
+    "build": "npm run clean && npm run tsc && rollup -c rollup.config.js --environment build:development",
     "build-prod": "npm run clean && rollup -c rollup.config.js --environment build:production",
     "rollup-watch": "cross-env rollup -c ./rollup.config.js --watch",
-    "start": "npm run clean && npm run rollup-watch",
+    "start": "npm run clean && npm run tsc && npm run rollup-watch",
     "pretty": "prettier -l \"**/*.{js,ts,json,md,html,css}\"",
     "pretty:file": "prettier -l",
     "pretty:fix": "prettier --write \"**/*.{js,ts,json,md,html,css}\"",
     "eslint": "eslint '**/*.{ts,js}'",
     "eslint:file": "eslint",
     "eslint:fix": "eslint --fix '**/*.{ts,js}'",
-    "lint:fix": "npm run pretty:fix && npm run eslint:fix"
+    "lint:fix": "npm run pretty:fix && npm run eslint:fix",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

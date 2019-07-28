@@ -1,4 +1,3 @@
-// @ts-ignore
 import { buildCustomElementConstructor } from "lwc";
 // @ts-ignore
 import App from "template/app";

@@ -58,7 +58,7 @@ export default {
         isWatching &&
             serve({
                 contentBase: dist,
-                open: true,
+                open: false,
                 port: 3000
             })
     ].filter(Boolean)
