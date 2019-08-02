@@ -47,5 +47,15 @@
     "rollup-plugin-terser": "^5.0.0",
     "rollup-slds-plugin": "^0.0.2",
     "typescript": "^3.5.3"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "lwc"
+        }
+      }
+    ]
   }
 }
