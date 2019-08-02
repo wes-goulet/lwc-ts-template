@@ -1,5 +1,5 @@
 {
-    "presets": ["@babel/typescript"],
+    "presets": ["@babel/preset-typescript"],
     "plugins": [
         [
             "@babel/plugin-syntax-decorators",

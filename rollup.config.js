@@ -33,7 +33,7 @@ export default {
         format: "esm"
     },
     plugins: [
-        babel(),
+        babel({ extensions: [".ts", ".js"] }),
         lwcCompiler({
             stylesheetConfig: { customProperties: { allowDefinition: true } },
             resolveFromPackages: false
