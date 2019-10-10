@@ -1,6 +1,6 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, api } from "@lwc/engine";
 
 export default class Balloon extends LightningElement {
-    @api
+    // @api
     testProp: any;
 }

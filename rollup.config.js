@@ -5,7 +5,6 @@ import fs from "fs-extra";
 import path from "path";
 import { terser } from "rollup-plugin-terser";
 import serve from "rollup-plugin-serve";
-import alias from "rollup-plugin-alias";
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 
@@ -37,9 +36,6 @@ export default {
         lwcCompiler({
             stylesheetConfig: { customProperties: { allowDefinition: true } },
             resolveFromPackages: false
-        }),
-        alias({
-            lwc: require.resolve("@lwc/engine/dist/modules/es2017/engine.js")
         }),
         resolve({
             modulesOnly: true

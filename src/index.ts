@@ -1,6 +1,5 @@
-import { buildCustomElementConstructor } from "lwc";
-// @ts-ignore
-import App from "template/app";
+import { buildCustomElementConstructor } from "@lwc/engine";
+import App from "./template/app/app";
 
 customElements.define("lwc-app", buildCustomElementConstructor(App));
 const element = document.createElement("lwc-app");
