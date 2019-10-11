@@ -25,10 +25,7 @@
     "@babel/core": "^7.6.4",
     "@babel/plugin-syntax-decorators": "^7.1.0",
     "@babel/preset-typescript": "^7.6.0",
-    "@lwc/compiler": "^1.1.0",
-    "@lwc/engine": "^1.1.0",
     "@lwc/rollup-plugin": "^1.1.0",
-    "@lwc/wire-service": "^1.1.0",
     "@salesforce/eslint-config-lwc": "^0.3.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
@@ -57,6 +54,6 @@
     ]
   },
   "dependencies": {
-    "@lwc/features": "^1.1.0"
+    "lwc": "^1.1.0"
   }
 }

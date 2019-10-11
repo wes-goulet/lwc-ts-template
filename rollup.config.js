@@ -34,8 +34,7 @@ export default {
     plugins: [
         babel({ extensions: [".ts", ".js"] }),
         lwcCompiler({
-            stylesheetConfig: { customProperties: { allowDefinition: true } },
-            resolveFromPackages: false
+            stylesheetConfig: { customProperties: { allowDefinition: true } }
         }),
         resolve({
             modulesOnly: true
