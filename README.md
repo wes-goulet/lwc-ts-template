@@ -18,7 +18,7 @@ npm start
 ## To build for prod (minified and no source maps)
 
 ```bash
-npm run build-prod
+npm run build:prod
 ```
 
 ## How does it work
