@@ -3,8 +3,7 @@ module.exports = {
     plugins: ["@typescript-eslint"],
     extends: [
         "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint", // this tells eslint to not barf around code formatting because prettier will take of it
-        "@salesforce/eslint-config-lwc/recommended"
+        "prettier/@typescript-eslint" // this tells eslint to not barf around code formatting because prettier will take of it
     ],
     parserOptions: {
         project: "./tsconfig.json"
@@ -14,9 +13,6 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/prefer-interface": "warn",
-        "@typescript-eslint/no-non-null-assertion": "warn",
-        "@lwc/lwc/no-async-operation": "warn",
-        "@lwc/lwc/no-inner-html": "warn",
-        "@lwc/lwc/no-document-query": "warn"
+        "@typescript-eslint/no-non-null-assertion": "warn"
     }
 };
