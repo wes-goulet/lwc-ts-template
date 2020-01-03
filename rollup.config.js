@@ -17,6 +17,8 @@ const dist = path.resolve(__dirname, `./${distFolderName}`);
 const publicFolder = path.resolve(__dirname, `./public`);
 const isWatching = process.env.ROLLUP_WATCH;
 
+const lwcModuleDir = path.join(__dirname, "./src/modules");
+
 const environment = process.env.build || "development";
 const isProduction = environment === "production";
 
@@ -55,7 +57,21 @@ export default {
         dir: `${distFolderName}/modules`,
         format: "es"
     },
-    manualChunks: { lwc: ["lwc"] },
+    manualChunks: modulePath => {
+        if (modulePath.includes("@lwc/engine")) {
+            return "lwc-engine";
+        }
+        // TODO - other lwc packages could go here (like wire service?)
+
+        if (modulePath.startsWith(lwcModuleDir)) {
+            const shortName = modulePath.substring(lwcModuleDir.length);
+            const parts = shortName.split(path.sep);
+            // the 0-index part is an empty string because shortName starts with a slash
+            if (parts.length > 2) {
+                return `${parts[1]}-${parts[2]}`;
+            }
+        }
+    },
     plugins: [
         replace({
             "process.env.NODE_ENV": JSON.stringify(environment),
@@ -72,7 +88,7 @@ export default {
             stylesheetConfig: {
                 customProperties: { allowDefinition: true }
             },
-            rootDir: path.join(__dirname, "./src/modules")
+            rootDir: lwcModuleDir
         }),
         resolve({
             modulesOnly: true
