@@ -50,11 +50,12 @@ fs.removeSync(dist);
 fs.copySync(publicFolder, dist);
 
 export default {
-    input: "./src/index.ts",
+    input: ["./src/index.ts", "./src/about.ts"],
     output: {
-        file: `${distFolderName}/bundle.js`,
+        dir: `${distFolderName}/modules`,
         format: "es"
     },
+    manualChunks: { lwc: ["lwc"] },
     plugins: [
         replace({
             "process.env.NODE_ENV": JSON.stringify(environment),

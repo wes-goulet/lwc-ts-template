@@ -1,0 +1,13 @@
+.button {
+    display: inline-block;
+    background: #ffe600;
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 50px 20px;
+}
+
+.button:hover {
+    background: orange;
+}

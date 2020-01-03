@@ -2,6 +2,12 @@
 
 A template for writing a standalone LWC app in Typescript.
 
+## A note about routing strategy
+
+This template uses server-side routing (in other words, it's a Multi Page App, not a SPA). If you want a Single Page App (SPA) then see the [sinlge-page-app-config branch](https://github.com/wes566/lwc-ts-template/tree/single-page-app-config).
+
+You can see the way that the output modules get code split by viewing the source files at https://lwc-ts-template.netlify.com/
+
 ## Starting a new project with this template
 
 ```
